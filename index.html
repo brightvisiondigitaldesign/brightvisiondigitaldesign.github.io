@@ -1,1 +1,468 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Bright Vision Digital Design helps businesses grow through professional websites, web applications, graphic design, branding and promotional videos in Ghana.">
+
+  <meta name="theme-color" content="#071426">
+
+  <title>Bright Vision Digital Design | Ghana</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #071426;
+      color: #f5f8ff;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid #203650;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #35d5f2;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      color: #c4d2e5;
+    }
+
+    .hero {
+      padding: 75px 0;
+      background: radial-gradient(
+        circle at top right,
+        #123655,
+        #071426 65%
+      );
+    }
+
+    .label {
+      color: #f6c453;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 66px);
+      line-height: 1.15;
+      margin: 20px 0;
+    }
+
+    h1 span {
+      color: #35d5f2;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #bdcce0;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 25px 10px 0 0;
+      padding: 13px 20px;
+      border-radius: 9px;
+      background: #35d5f2;
+      color: #071426;
+      font-weight: bold;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid #35d5f2;
+      color: #35d5f2;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+    .intro {
+      color: #bdcce0;
+      margin-bottom: 30px;
+      max-width: 650px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #0d2037;
+      border: 1px solid #203650;
+      padding: 23px;
+      border-radius: 14px;
+    }
+
+    .card .icon {
+      font-size: 30px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #bdcce0;
+      font-size: 15px;
+    }
+
+    .portfolio a {
+      display: inline-block;
+      color: #35d5f2;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .about-box,
+    .contact-box {
+      background: #0d2037;
+      border: 1px solid #203650;
+      padding: 30px;
+      border-radius: 16px;
+    }
+
+    .about-box p,
+    .contact-box p {
+      color: #bdcce0;
+      margin-top: 12px;
+    }
+
+    .contact-box {
+      text-align: center;
+    }
+
+    footer {
+      border-top: 1px solid #203650;
+      padding: 25px 0;
+      text-align: center;
+      color: #bdcce0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        padding: 50px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#home">
+        BRIGHT <span>VISION</span> DIGITAL DESIGN
+      </a>
+
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="label">Creative thinking. Digital excellence.</div>
+
+        <h1>
+          Build a stronger business
+          <span>online.</span>
+        </h1>
+
+        <p>
+          We help businesses grow through professional websites,
+          web applications, graphic design, branding and promotional
+          videos. Let's turn your ideas into practical digital solutions.
+        </p>
+
+        <a class="button"
+           href="https://wa.me/233599035746?text=Hello%20Bright%20Vision%20Digital%20Design">
+          Contact Us on WhatsApp
+        </a>
+
+        <a class="button secondary" href="#portfolio">
+          Explore Our Work
+        </a>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="label">What we do</div>
+        <h2 class="section-title">Our Digital Services</h2>
+
+        <p class="intro">
+          Practical creative and technology services for businesses
+          that want to present themselves professionally.
+        </p>
+
+        <div class="grid">
+
+          <article class="card">
+            <div class="icon">💻</div>
+            <h3>Website Development</h3>
+            <p>
+              Modern, mobile-friendly business websites, landing pages,
+              online catalogues and e-commerce experiences.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">⚙️</div>
+            <h3>Web Applications</h3>
+            <p>
+              Useful digital tools designed to simplify business
+              processes and improve customer experiences.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🎨</div>
+            <h3>Graphic Design & Branding</h3>
+            <p>
+              Professional logos, flyers, banners and brand visuals
+              that help businesses stand out.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🎬</div>
+            <h3>Promotional Videos</h3>
+            <p>
+              Promotional video editing for products, services,
+              businesses and social media campaigns.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🛍️</div>
+            <h3>Online Product Catalogues</h3>
+            <p>
+              Present your products online and make it easier
+              for customers to discover what you sell.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">📱</div>
+            <h3>Digital Presence</h3>
+            <p>
+              Improve how your business presents itself online
+              and make it easier for customers to contact you.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <div class="label">Selected projects</div>
+        <h2 class="section-title">Our Portfolio</h2>
+
+        <p class="intro">
+          Explore some of our website projects and digital experiences.
+        </p>
+
+        <div class="grid portfolio">
+
+          <article class="card">
+            <h3>Product Catalog</h3>
+            <p>A website concept for displaying products online.</p>
+            <a href="https://bro-2010.github.io/Product-catalog-/">
+              View Project ↗
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>Mama Adamu Eatery</h3>
+            <p>A website concept for a food business.</p>
+            <a href="https://bro-2010.github.io/Mama-Adamu-Eatery-/">
+              View Project ↗
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>StudyMate</h3>
+            <p>A learning-support project for students.</p>
+            <a href="https://bro-2010.github.io/Study-mate/">
+              View Project ↗
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>Vision Sandals</h3>
+            <p>A product website concept for a sandals business.</p>
+            <a href="https://bro-2010.github.io/Sandals-sales/">
+              View Project ↗
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>Creative Website Sample</h3>
+            <p>Explore another website concept from our portfolio.</p>
+            <a href="https://neon-concha-c8c8d5.netlify.app/">
+              View Project ↗
+            </a>
+          </article>
+
+          <article class="card">
+            <h3>Your Business Could Be Next</h3>
+            <p>Let's discuss a digital solution for your business.</p>
+            <a href="https://wa.me/233599035746">
+              Start a Conversation ↗
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-box">
+        <div class="label">About our company</div>
+
+        <h2 class="section-title">
+          Empowering Businesses with World-Class Web & Digital Solutions
+        </h2>
+
+        <p>
+          Bright Vision Digital Design is a digital creative business
+          based in Tamale, Northern Region, Ghana.
+        </p>
+
+        <p>
+          Founded and led by Abdul Basit, we focus on creating useful
+          digital experiences that help businesses communicate clearly,
+          present their services and connect with customers.
+        </p>
+
+        <p>
+          Our approach is simple: understand your goals, develop a
+          suitable solution and help you present your business with
+          confidence.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-box">
+        <div class="label">Let's work together</div>
+
+        <h2 class="section-title">
+          Ready to grow your business online?
+        </h2>
+
+        <p>
+          Contact us to discuss your website, graphic design,
+          branding or promotional video project.
+        </p>
+
+        <p><strong>Location:</strong> Tamale, Northern Region, Ghana</p>
+
+        <p>
+          <strong>Email:</strong>
+          <a style="color:#35d5f2"
+             href="mailto:mr.shaibu776@gmail.com">
+            mr.shaibu776@gmail.com
+          </a>
+        </p>
+
+        <a class="button"
+           href="https://wa.me/233599035746?text=Hello%20Bright%20Vision%20Digital%20Design">
+          Chat with Us on WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        &copy; <span id="year"></span>
+        Bright Vision Digital Design. All rights reserved.
+      </p>
+      <p>Designed with care in Ghana.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+  </html>
