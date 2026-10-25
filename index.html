@@ -1,468 +1,1401 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Bright Vision Digital Design helps businesses grow through professional websites, web applications, graphic design, branding and promotional videos in Ghana.">
-
-  <meta name="theme-color" content="#071426">
-
-  <title>Bright Vision Digital Design | Ghana</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07162d">
+  <meta name="description" content="Bright Vision Digital Design helps businesses grow online with modern websites, web applications, graphic design, branding, product catalogues and promotional video editing in Tamale, Ghana.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bright Vision Digital Design | Your Vision, Our Creativity">
+  <meta property="og:description" content="Modern websites, digital design and creative solutions for growing businesses in Ghana.">
+  <meta property="og:url" content="https://brightvisiondigitaldesign.github.io/">
+  <title>Bright Vision Digital Design | Your Vision, Our Creativity</title>
+  <link rel="canonical" href="https://brightvisiondigitaldesign.github.io/">
 
   <style>
+    :root {
+      --navy: #07162d;
+      --navy2: #0b2142;
+      --blue: #1677f9;
+      --cyan: #36d9f5;
+      --gold: #f2c66d;
+      --white: #f7fbff;
+      --muted: #b5c5dc;
+      --panel: #102747;
+      --line: rgba(179,211,255,.16);
+    }
+
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 82px;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #071426;
-      color: #f5f8ff;
-      line-height: 1.7;
+      margin: 0;
+      background: var(--navy);
+      color: var(--white);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
     }
 
     a {
+      color: inherit;
       text-decoration: none;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1100px;
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .wrap {
+      width: min(1120px, 92%);
       margin: auto;
     }
 
-    header {
-      padding: 22px 0;
-      border-bottom: 1px solid #203650;
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .logo {
-      font-size: 19px;
-      font-weight: bold;
-    }
-
-    .logo span {
-      color: #35d5f2;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    nav a {
-      color: #c4d2e5;
-    }
-
-    .hero {
-      padding: 75px 0;
-      background: radial-gradient(
-        circle at top right,
-        #123655,
-        #071426 65%
+    .topline {
+      height: 4px;
+      background: linear-gradient(
+        90deg, var(--blue), var(--cyan), var(--gold)
       );
     }
 
-    .label {
-      color: #f6c453;
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(7,22,45,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -.3px;
+    }
+
+    .brandmark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      width: 50px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(145deg,#2d91ff,#0754d7);
+      box-shadow: 0 8px 28px #1677f93d;
+      font-size: 24px;
+      font-weight: 950;
+      letter-spacing: -5px;
+      padding-right: 5px;
+    }
+
+    .logo-b {
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo-v {
+      position: relative;
+      z-index: 1;
+      color: #baf5ff;
+      font-size: 23px;
+      font-weight: 950;
+      transform: skew(-8deg);
+      margin-left: 1px;
+      text-shadow: 0 1px 5px #06172e80;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
       font-size: 13px;
-      font-weight: bold;
+      color: #d4e2f5;
+    }
+
+    .links a:hover {
+      color: var(--cyan);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 14px;
+      transition: transform .2s, filter .2s;
+      border: 1px solid transparent;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+    }
+
+    .primary {
+      background: linear-gradient(120deg,var(--blue),#0758d6);
+      box-shadow: 0 10px 28px #1677f933;
+    }
+
+    .secondary {
+      border-color: var(--line);
+      background: #ffffff08;
+    }
+
+    /* HERO SECTION */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 82px 0 76px;
+      background:
+        radial-gradient(ellipse at 80% 30%,#1478f926,transparent 36%),
+        radial-gradient(ellipse at 12% 10%,#35d9f516,transparent 30%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 12px;
+      border: 1px solid #36d9f544;
+      border-radius: 999px;
+      color: #a9f1ff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 12px var(--cyan);
     }
 
     h1 {
-      font-size: clamp(38px, 7vw, 66px);
-      line-height: 1.15;
-      margin: 20px 0;
+      font-size: clamp(38px,6vw,67px);
+      line-height: 1.06;
+      letter-spacing: -2.6px;
+      margin: 22px 0;
     }
 
-    h1 span {
-      color: #35d5f2;
+    .gradient {
+      background: linear-gradient(100deg,#fff 15%,#78dcff 65%,#f2c66d);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
-    .hero p {
-      max-width: 650px;
-      color: #bdcce0;
+    .lead {
+      max-width: 610px;
+      color: var(--muted);
       font-size: 17px;
+      line-height: 1.85;
     }
 
-    .button {
-      display: inline-block;
-      margin: 25px 10px 0 0;
-      padding: 13px 20px;
-      border-radius: 9px;
-      background: #35d5f2;
-      color: #071426;
-      font-weight: bold;
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 28px 0 20px;
     }
 
-    .button.secondary {
-      background: transparent;
-      border: 1px solid #35d5f2;
-      color: #35d5f2;
+    .trust {
+      font-size: 12px;
+      color: #91a8c6;
+      margin-top: 19px;
     }
+
+    /* HERO ILLUSTRATION */
+
+    .visual {
+      position: relative;
+      min-height: 390px;
+      display: grid;
+      place-items: center;
+    }
+
+    .orbit {
+      position: absolute;
+      width: 340px;
+      height: 340px;
+      border: 1px solid #4ebaff38;
+      border-radius: 50%;
+      box-shadow: 0 0 70px #1677f91a,
+        inset 0 0 60px #1677f90c;
+    }
+
+    .orbit:before,
+    .orbit:after {
+      content: "";
+      position: absolute;
+      border: 1px solid #4ebaff2a;
+      border-radius: 50%;
+      inset: 25px;
+    }
+
+    .orbit:after {
+      inset: 52px;
+    }
+
+    .float-card {
+      position: absolute;
+      background: #10294aee;
+      border: 1px solid #b6d8ff28;
+      border-radius: 17px;
+      padding: 15px 17px;
+      box-shadow: 0 18px 55px #0004;
+      backdrop-filter: blur(10px);
+    }
+
+    .float-card strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .float-card span {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .fc1 {
+      top: 45px;
+      right: 0;
+    }
+
+    .fc2 {
+      bottom: 43px;
+      left: 0;
+    }
+
+    .fc3 {
+      bottom: 15px;
+      right: 22px;
+    }
+
+    .mock-window {
+      width: min(360px,95%);
+      position: relative;
+      z-index: 1;
+      border: 1px solid #8acbff45;
+      background: #0c2140;
+      border-radius: 22px;
+      padding: 13px;
+      box-shadow: 0 35px 90px #0007;
+      transform: rotate(-2deg);
+    }
+
+    .window-head {
+      display: flex;
+      gap: 5px;
+      padding: 3px 4px 13px;
+    }
+
+    .window-head i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #7194b8;
+    }
+
+    .mock-content {
+      border-radius: 14px;
+      background: linear-gradient(140deg,#143a70,#0b1b35);
+      padding: 24px 18px;
+      min-height: 240px;
+      overflow: hidden;
+    }
+
+    .mock-tag {
+      font-size: 9px;
+      color: #80eaff;
+      letter-spacing: 2px;
+      font-weight: 800;
+    }
+
+    .mock-title {
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin: 12px 0;
+    }
+
+    .mock-line {
+      height: 6px;
+      width: 78%;
+      border-radius: 8px;
+      background: #ffffff27;
+      margin: 8px 0;
+    }
+
+    .mock-line.short {
+      width: 48%;
+    }
+
+    .mock-button {
+      height: 24px;
+      width: 95px;
+      background: linear-gradient(90deg,#1677f9,#36d9f5);
+      border-radius: 7px;
+      margin-top: 18px;
+    }
+
+    .mock-art {
+      position: absolute;
+      right: -10px;
+      bottom: -26px;
+      width: 135px;
+      height: 135px;
+      border-radius: 40px;
+      transform: rotate(25deg);
+      background: linear-gradient(145deg,#36d9f5,#1677f9 58%,#f2c66d);
+      opacity: .85;
+      box-shadow: 0 0 60px #1677f955;
+    }
+
+    /* GENERAL SECTIONS */
 
     section {
-      padding: 65px 0;
+      padding: 78px 0;
     }
 
-    .section-title {
-      font-size: 32px;
-      margin: 10px 0;
+    .section-head {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 38px;
     }
 
-    .intro {
-      color: #bdcce0;
-      margin-bottom: 30px;
-      max-width: 650px;
+    .kicker {
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
-    .grid {
+    h2 {
+      font-size: clamp(29px,4vw,43px);
+      line-height: 1.18;
+      letter-spacing: -1.1px;
+      margin: 10px 0 14px;
+    }
+
+    .section-head p,
+    .subtext {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #091a33;
+    }
+
+    .grid3 {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 18px;
     }
 
     .card {
-      background: #0d2037;
-      border: 1px solid #203650;
-      padding: 23px;
+      background: linear-gradient(145deg,#112b4d,#0c203c);
+      border: 1px solid var(--line);
+      border-radius: 19px;
+      padding: 25px;
+      transition: transform .2s,border-color .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #36d9f566;
+    }
+
+    .icon {
+      width: 49px;
+      height: 49px;
+      display: grid;
+      place-items: center;
+      background: #1677f91c;
+      border: 1px solid #36d9f52c;
       border-radius: 14px;
+      color: var(--cyan);
+      font-size: 24px;
+      margin-bottom: 18px;
     }
 
-    .card .icon {
-      font-size: 30px;
-    }
-
-    .card h3 {
-      margin: 10px 0;
-      color: #ffffff;
+    h3 {
+      font-size: 18px;
+      margin: 0 0 8px;
     }
 
     .card p {
-      color: #bdcce0;
-      font-size: 15px;
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
     }
 
-    .portfolio a {
-      display: inline-block;
-      color: #35d5f2;
-      font-weight: bold;
-      margin-top: 15px;
+    /* PORTFOLIO */
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 20px;
     }
 
-    .about-box,
-    .contact-box {
-      background: #0d2037;
-      border: 1px solid #203650;
-      padding: 30px;
-      border-radius: 16px;
+    .project {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 19px;
+      background: #0c203b;
     }
 
-    .about-box p,
-    .contact-box p {
-      color: #bdcce0;
-      margin-top: 12px;
+    .preview {
+      height: 190px;
+      padding: 18px;
+      background: linear-gradient(135deg,#133a69,#0a1c36);
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .contact-box {
+    .preview:before {
+      content: "";
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      border: 1px solid #8acbff35;
+      border-radius: 50%;
+      right: -55px;
+      top: -90px;
+    }
+
+    .browser {
+      width: 86%;
+      height: 130px;
+      border: 1px solid #ffffff30;
+      border-radius: 10px;
+      background: #07172cdd;
+      padding: 9px;
+      box-shadow: 0 12px 30px #0005;
+      position: relative;
+      z-index: 1;
+    }
+
+    .browserbar {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+
+    .browserbar i {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #7f9dbf;
+    }
+
+    .browserhero {
+      height: 65px;
+      border-radius: 6px;
+      background: linear-gradient(120deg,#1677f9,#36d9f5 70%,#f2c66d);
+      padding: 11px;
+      color: #06172e;
+      font-size: 12px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+    }
+
+    .preview.catalog .browserhero {
+      background: linear-gradient(120deg,#d8f3ff,#5aabef);
+    }
+
+    .preview.eatery .browserhero {
+      background: linear-gradient(120deg,#4b2818,#e2a45e);
+      color: #fff5e9;
+    }
+
+    .preview.study .browserhero {
+      background: linear-gradient(120deg,#173f74,#6ad6d9);
+      color: #fff;
+    }
+
+    .preview.sandals .browserhero {
+      background: linear-gradient(120deg,#d8b68a,#765239);
+      color: #20150f;
+    }
+
+    .preview.store .browserhero {
+      background: linear-gradient(120deg,#5b3ac5,#d5b9ff);
+      color: #fff;
+    }
+
+    .preview.demo .browserhero {
+      background: linear-gradient(120deg,#0d9d95,#a2f2df);
+      color: #082c32;
+    }
+
+    .project-body {
+      padding: 20px;
+    }
+
+    .project-body p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 15px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      color: #8cecff;
+      font-weight: 800;
+      font-size: 13px;
+      gap: 7px;
+    }
+
+    .note {
+      font-size: 11px;
+      color: #8ca5c4;
       text-align: center;
+      margin-top: 22px;
     }
+
+    /* ABOUT */
+
+    .about {
+      background: #091a33;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .about-art {
+      min-height: 290px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 30% 30%,#1677f940,transparent 35%),
+        linear-gradient(140deg,#102c50,#0a1b34);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 25px;
+    }
+
+    .big-b {
+      width: 125px;
+      height: 105px;
+      margin: 0 auto 17px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg,#2d91ff,#0754d7);
+      font-size: 62px;
+      font-weight: 950;
+      letter-spacing: -13px;
+      padding-right: 12px;
+      box-shadow: 0 20px 55px #1677f944;
+    }
+
+    .big-v {
+      color: #baf5ff;
+      font-size: 58px;
+      font-weight: 950;
+      transform: skew(-8deg);
+      margin-left: 2px;
+      text-shadow: 0 2px 8px #06172e80;
+    }
+
+    .about-art p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+    }
+
+    .ticks {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 22px 0;
+    }
+
+    .ticks li {
+      font-size: 13px;
+      color: #d9e8fa;
+    }
+
+    .ticks li:before {
+      content: "✓";
+      color: var(--cyan);
+      font-weight: 900;
+      margin-right: 9px;
+    }
+
+    /* PROCESS */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 14px;
+    }
+
+    .step {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #ffffff04;
+    }
+
+    .step b {
+      display: block;
+      color: var(--cyan);
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background:
+        radial-gradient(ellipse at 50% 0%,#1677f925,transparent 55%),
+        #091a33;
+    }
+
+    .contact-box {
+      border: 1px solid #36d9f536;
+      border-radius: 25px;
+      padding: clamp(25px,5vw,52px);
+      background: linear-gradient(135deg,#10294a,#0a1d38);
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-item {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #ffffff05;
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 11px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+    }
+
+    /* FOOTER */
 
     footer {
-      border-top: 1px solid #203650;
-      padding: 25px 0;
-      text-align: center;
-      color: #bdcce0;
-      font-size: 14px;
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      color: #8da4c1;
+      font-size: 12px;
     }
 
-    @media (max-width: 700px) {
-      .grid {
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .float-wa {
+      position: fixed;
+      right: 17px;
+      bottom: 17px;
+      z-index: 30;
+      background: #16a765;
+      color: white;
+      border-radius: 999px;
+      padding: 13px 17px;
+      font-weight: 900;
+      font-size: 13px;
+      box-shadow: 0 10px 30px #0005;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width:850px) {
+      .links {
+        gap: 12px;
+      }
+
+      .links a:not(.btn) {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-box {
         grid-template-columns: 1fr;
       }
 
+      .hero {
+        padding-top: 55px;
+      }
+
+      .visual {
+        min-height: 340px;
+      }
+
+      .grid3 {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .steps {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+
+    @media (max-width:560px) {
       .nav {
-        align-items: flex-start;
-        flex-direction: column;
+        min-height: 68px;
+      }
+
+      .brand {
+        font-size: 13px;
+      }
+
+      .brandmark {
+        width: 46px;
+        height: 39px;
+        font-size: 22px;
+      }
+
+      .logo-v {
+        font-size: 21px;
+      }
+
+      .links .btn {
+        padding: 10px 12px;
+        font-size: 12px;
       }
 
       .hero {
-        padding: 50px 0;
+        padding: 45px 0 50px;
+      }
+
+      h1 {
+        letter-spacing: -1.6px;
+      }
+
+      .lead {
+        font-size: 15px;
+      }
+
+      .visual {
+        min-height: 310px;
+      }
+
+      .orbit {
+        width: 270px;
+        height: 270px;
+      }
+
+      .fc1 {
+        right: -3px;
+        top: 15px;
+      }
+
+      .fc2 {
+        left: -3px;
+        bottom: 22px;
+      }
+
+      .fc3 {
+        right: 0;
+        bottom: 0;
+      }
+
+      .float-card {
+        padding: 10px 12px;
+      }
+
+      .float-card strong {
+        font-size: 11px;
+      }
+
+      .float-card span {
+        font-size: 9px;
+      }
+
+      .mock-window {
+        width: 85%;
+      }
+
+      .grid3,
+      .portfolio-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      .preview {
+        height: 170px;
+      }
+
+      .ticks {
+        grid-template-columns: 1fr;
+      }
+
+      .float-wa {
+        right: 12px;
+        bottom: 12px;
+      }
+
+      .actions .btn {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *:before,
+      *:after {
+        transition: none !important;
       }
     }
   </style>
 </head>
 
 <body>
+  <div class="topline"></div>
 
   <header>
-    <div class="container nav">
-      <a class="logo" href="#home">
-        BRIGHT <span>VISION</span> DIGITAL DESIGN
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Bright Vision Digital Design home">
+        <span class="brandmark" aria-label="BV logo">
+          <span class="logo-b">B</span><span class="logo-v">V</span>
+        </span>
+        <span>Bright Vision<small>Digital Design</small></span>
       </a>
 
-      <nav>
+      <nav class="links" aria-label="Main navigation">
         <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#work">Portfolio</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn primary">Let's Talk ↗</a>
       </nav>
     </div>
   </header>
 
   <main>
-
+    <!-- HERO -->
     <section class="hero" id="home">
-      <div class="container">
-        <div class="label">Creative thinking. Digital excellence.</div>
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">
+            <span class="dot"></span>
+            Creative digital solutions · Ghana
+          </div>
 
-        <h1>
-          Build a stronger business
-          <span>online.</span>
-        </h1>
+          <h1>Your vision.<br>
+            <span class="gradient">Our creativity.</span>
+          </h1>
 
-        <p>
-          We help businesses grow through professional websites,
-          web applications, graphic design, branding and promotional
-          videos. Let's turn your ideas into practical digital solutions.
-        </p>
+          <p class="lead">
+            We help businesses build a stronger online presence with modern
+            websites, useful web applications, memorable graphic design and
+            promotional content that makes your brand stand out.
+          </p>
 
-        <a class="button"
-           href="https://wa.me/233599035746?text=Hello%20Bright%20Vision%20Digital%20Design">
-          Contact Us on WhatsApp
-        </a>
+          <div class="actions">
+            <a class="btn primary"
+               href="https://wa.me/233599035746?text=Hello%20Bright%20Vision%20Digital%20Design%2C%20I%27d%20like%20to%20discuss%20a%20project.">
+              Start a project ↗
+            </a>
+            <a class="btn secondary" href="#work">
+              Explore our work ↓
+            </a>
+          </div>
 
-        <a class="button secondary" href="#portfolio">
-          Explore Our Work
-        </a>
+          <div class="trust">
+            Thoughtful design · Mobile-friendly builds · Clear communication
+          </div>
+        </div>
+
+        <div class="visual" aria-label="Illustration of a modern digital website design">
+          <div class="orbit"></div>
+
+          <div class="mock-window">
+            <div class="window-head"><i></i><i></i><i></i></div>
+
+            <div class="mock-content">
+              <div class="mock-tag">YOUR NEXT BIG IDEA</div>
+              <div class="mock-title">Make your<br>brand shine.</div>
+              <div class="mock-line"></div>
+              <div class="mock-line short"></div>
+              <div class="mock-button"></div>
+              <div class="mock-art"></div>
+            </div>
+          </div>
+
+          <div class="float-card fc1">
+            <strong>✦ Modern design</strong>
+            <span>Made for your audience</span>
+          </div>
+
+          <div class="float-card fc2">
+            <strong>↗ Built for mobile</strong>
+            <span>Great on small screens</span>
+          </div>
+
+          <div class="float-card fc3">
+            <strong>◎ Your vision first</strong>
+            <span>Creative. Clear. Useful.</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="services">
-      <div class="container">
-        <div class="label">What we do</div>
-        <h2 class="section-title">Our Digital Services</h2>
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">What we do</div>
+          <h2>Creative services for growing businesses</h2>
+          <p>
+            Practical digital solutions designed to help your business look
+            professional, reach more people and serve customers better.
+          </p>
+        </div>
 
-        <p class="intro">
-          Practical creative and technology services for businesses
-          that want to present themselves professionally.
-        </p>
-
-        <div class="grid">
-
+        <div class="grid3">
           <article class="card">
-            <div class="icon">💻</div>
+            <div class="icon">⌘</div>
             <h3>Website Development</h3>
             <p>
-              Modern, mobile-friendly business websites, landing pages,
-              online catalogues and e-commerce experiences.
+              Responsive business websites, landing pages and online profiles
+              that explain what you offer and make it easy for customers to contact you.
             </p>
           </article>
 
           <article class="card">
-            <div class="icon">⚙️</div>
+            <div class="icon">▦</div>
             <h3>Web Applications</h3>
             <p>
-              Useful digital tools designed to simplify business
-              processes and improve customer experiences.
+              Purpose-built digital tools and interactive experiences planned
+              around your business or organisation's needs.
             </p>
           </article>
 
           <article class="card">
-            <div class="icon">🎨</div>
+            <div class="icon">✳</div>
             <h3>Graphic Design & Branding</h3>
             <p>
-              Professional logos, flyers, banners and brand visuals
-              that help businesses stand out.
+              Logos, flyers, banners and brand visuals that help your business
+              communicate consistently and confidently.
             </p>
           </article>
 
           <article class="card">
-            <div class="icon">🎬</div>
-            <h3>Promotional Videos</h3>
+            <div class="icon">▶</div>
+            <h3>Promotional Video Editing</h3>
             <p>
-              Promotional video editing for products, services,
-              businesses and social media campaigns.
+              Promotional video content to introduce products, showcase
+              services and support your online marketing.
             </p>
           </article>
 
           <article class="card">
-            <div class="icon">🛍️</div>
+            <div class="icon">▤</div>
             <h3>Online Product Catalogues</h3>
             <p>
-              Present your products online and make it easier
-              for customers to discover what you sell.
+              Clear product pages that help customers browse your items and
+              enquire or order through convenient contact channels.
             </p>
           </article>
 
           <article class="card">
-            <div class="icon">📱</div>
-            <h3>Digital Presence</h3>
+            <div class="icon">↗</div>
+            <h3>Digital Presence Support</h3>
             <p>
-              Improve how your business presents itself online
-              and make it easier for customers to contact you.
+              Help presenting your business online with clear content, useful
+              links and a consistent digital identity.
             </p>
           </article>
-
         </div>
       </div>
     </section>
 
-    <section id="portfolio">
-      <div class="container">
-        <div class="label">Selected projects</div>
-        <h2 class="section-title">Our Portfolio</h2>
+    <!-- PORTFOLIO -->
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Selected projects</div>
+          <h2>Work built with purpose</h2>
+          <p>
+            Explore selected web projects. Open a project to view the live website.
+          </p>
+        </div>
 
-        <p class="intro">
-          Explore some of our website projects and digital experiences.
+        <div class="portfolio-grid">
+          <article class="project">
+            <div class="preview catalog">
+              <div class="browser">
+                <div class="browserbar"><i></i><i></i><i></i></div>
+                <div class="browserhero">PRODUCT CATALOGUE</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Product Catalog</h3>
+              <p>
+                An online catalogue concept for presenting products clearly
+                and helping visitors explore available items.
+              </p>
+              <a class="project-link"
+                 href="https://bro-2010.github.io/Product-catalog-/"
+                 target="_blank" rel="noopener noreferrer">
+                View live project ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="preview eatery">
+              <div class="browser">
+                <div class="browserbar"><i></i><i></i><i></i></div>
+                <div class="browserhero">MAMA ADAMU EATERY</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Mama Adamu Eatery</h3>
+              <p>
+                A food-business website concept designed to introduce an
+                eatery and make its information easy to find.
+              </p>
+              <a class="project-link"
+                 href="https://bro-2010.github.io/Mama-Adamu-Eatery-/"
+                 target="_blank" rel="noopener noreferrer">
+                View live project ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="preview study">
+              <div class="browser">
+                <div class="browserbar"><i></i><i></i><i></i></div>
+                <div class="browserhero">STUDYMATE · LEARN</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>StudyMate</h3>
+              <p>
+                A student-focused learning project designed to support study
+                organisation and learning activities.
+              </p>
+              <a class="project-link"
+                 href="https://bro-2010.github.io/Study-mate/"
+                 target="_blank" rel="noopener noreferrer">
+                View live project ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="preview sandals">
+              <div class="browser">
+                <div class="browserbar"><i></i><i></i><i></i></div>
+                <div class="browserhero">VISION SANDALS</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Vision Sandals</h3>
+              <p>
+                A mobile-friendly product website concept for showcasing
+                sandals and directing customers to contact the seller.
+              </p>
+              <a class="project-link"
+                 href="https://bro-2010.github.io/Sandals-sales/"
+                 target="_blank" rel="noopener noreferrer">
+                View live project ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="preview store">
+              <div class="browser">
+                <div class="browserbar"><i></i><i></i><i></i></div>
+                <div class="browserhero">MOI DIGITAL STORE</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Moi Digital Store</h3>
+              <p>
+                A digital-store project concept for presenting a store and
+                its offerings online.
+              </p>
+              <a class="project-link"
+                 href="https://bro-2010.github.io/Moi-digital-store-/"
+                 target="_blank" rel="noopener noreferrer">
+                View live project ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="preview demo">
+              <div class="browser">
+                <div class="browserbar"><i></i><i></i><i></i></div>
+                <div class="browserhero">YOUR BUSINESS ONLINE</div>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Business Website Concepts</h3>
+              <p>
+                We create tailored website concepts around each client's
+                brand, goals and customers.
+              </p>
+              <a class="project-link"
+                 href="https://wa.me/233599035746?text=Hello%2C%20I%27d%20like%20to%20see%20a%20business%20website%20demo."
+                 target="_blank" rel="noopener noreferrer">
+                Ask to see a demo ↗
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <p class="note">
+          The project panels above are illustrative previews, not screenshots.
+          Open each live project to see its actual design and current availability.
         </p>
+      </div>
+    </section>
 
-        <div class="grid portfolio">
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-art">
+          <div>
+            <div class="big-b" aria-label="Bright Vision BV logo">
+              <span>B</span><span class="big-v">V</span>
+            </div>
+            <h3>Bright Vision Digital Design</h3>
+            <p>Your vision, our creativity.</p>
+          </div>
+        </div>
 
-          <article class="card">
-            <h3>Product Catalog</h3>
-            <p>A website concept for displaying products online.</p>
-            <a href="https://bro-2010.github.io/Product-catalog-/">
-              View Project ↗
-            </a>
-          </article>
+        <div class="about-copy">
+          <div class="kicker">Who we are</div>
+          <h2>Creative thinking. Useful digital work.</h2>
 
-          <article class="card">
-            <h3>Mama Adamu Eatery</h3>
-            <p>A website concept for a food business.</p>
-            <a href="https://bro-2010.github.io/Mama-Adamu-Eatery-/">
-              View Project ↗
-            </a>
-          </article>
+          <p>
+            Bright Vision Digital Design is a creative digital service
+            business based in Tamale, Ghana. We help entrepreneurs and
+            organisations present their ideas professionally through
+            websites, web experiences and visual content.
+          </p>
 
-          <article class="card">
-            <h3>StudyMate</h3>
-            <p>A learning-support project for students.</p>
-            <a href="https://bro-2010.github.io/Study-mate/">
-              View Project ↗
-            </a>
-          </article>
+          <p>
+            Founded and led by <strong>Shaibu Abdul Basit</strong>,
+            Bright Vision is built around a simple idea: listen carefully,
+            design with purpose and make digital solutions easier for people to use.
+          </p>
 
-          <article class="card">
-            <h3>Vision Sandals</h3>
-            <p>A product website concept for a sandals business.</p>
-            <a href="https://bro-2010.github.io/Sandals-sales/">
-              View Project ↗
-            </a>
-          </article>
+          <ul class="ticks">
+            <li>Mobile-friendly approach</li>
+            <li>Business-focused design</li>
+            <li>Clear project communication</li>
+            <li>Creative, practical solutions</li>
+          </ul>
 
-          <article class="card">
-            <h3>Moi Digital Store</h3>
-            <p>Explore Moi Digital Store and discover its online shopping experience.</p>
-            <a href="https://bro-2010.github.io/Moi-digital-store-/">
-              View Project ↗
-            </a>
-          </article>
-
-          <article class="card">
-            <h3>Your Business Could Be Next</h3>
-            <p>Let's discuss a digital solution for your business.</p>
-            <a href="https://wa.me/233599035746">
-              Start a Conversation ↗
-            </a>
-          </article>
-
+          <a class="btn secondary" href="#contact">Work with us ↗</a>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="container about-box">
-        <div class="label">About our company</div>
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">How we work</div>
+          <h2>A simple path from idea to launch</h2>
+          <p>We keep the process clear so you know what happens next.</p>
+        </div>
 
-        <h2 class="section-title">
-          Empowering Businesses with World-Class Web & Digital Solutions
-        </h2>
+        <div class="steps">
+          <div class="step">
+            <b>01 · DISCOVER</b>
+            <h3>Tell us your idea</h3>
+            <p>
+              Share your business, goals, audience and what you want the
+              project to achieve.
+            </p>
+          </div>
 
-        <p>
-          Bright Vision Digital Design is a digital creative business
-          based in Tamale, Northern Region, Ghana.
-        </p>
+          <div class="step">
+            <b>02 · PLAN</b>
+            <h3>Agree on the direction</h3>
+            <p>
+              We discuss the structure, style, key features, timeline and project scope.
+            </p>
+          </div>
 
-        <p>
-          Founded and led by Abdul Basit, we focus on creating useful
-          digital experiences that help businesses communicate clearly,
-          present their services and connect with customers.
-        </p>
+          <div class="step">
+            <b>03 · CREATE</b>
+            <h3>Build and review</h3>
+            <p>
+              We develop the agreed work and invite your feedback on the project.
+            </p>
+          </div>
 
-        <p>
-          Our approach is simple: understand your goals, develop a
-          suitable solution and help you present your business with
-          confidence.
-        </p>
+          <div class="step">
+            <b>04 · DELIVER</b>
+            <h3>Prepare to go live</h3>
+            <p>
+              We finalise agreed changes and explain the next steps for publishing and use.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="container contact-box">
-        <div class="label">Let's work together</div>
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-box">
+        <div>
+          <div class="kicker">Let's create something</div>
+          <h2>Have a project in mind?</h2>
+          <p>
+            Tell us what you are building. Whether you need a business website,
+            a product catalogue, branding or promotional content, let's talk
+            about the right solution for you.
+          </p>
 
-        <h2 class="section-title">
-          Ready to grow your business online?
-        </h2>
+          <div class="actions">
+            <a class="btn primary"
+               href="https://wa.me/233599035746?text=Hello%20Bright%20Vision%20Digital%20Design%2C%20I%27d%20like%20to%20discuss%20a%20project.">
+              Chat on WhatsApp ↗
+            </a>
+            <a class="btn secondary" href="mailto:mr.shaibu776@gmail.com">
+              Send an email ↗
+            </a>
+          </div>
+        </div>
 
-        <p>
-          Contact us to discuss your website, graphic design,
-          branding or promotional video project.
-        </p>
+        <div class="contact-list">
+          <div class="contact-item">
+            <strong>WhatsApp / Phone</strong>
+            <a href="https://wa.me/233599035746">+233 59 903 5746</a>
+          </div>
 
-        <p><strong>Location:</strong> Tamale, Northern Region, Ghana</p>
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a href="mailto:mr.shaibu776@gmail.com">mr.shaibu776@gmail.com</a>
+          </div>
 
-        <p>
-          <strong>Email:</strong>
-          <a style="color:#35d5f2"
-             href="mailto:mr.shaibu776@gmail.com">
-            mr.shaibu776@gmail.com
-          </a>
-        </p>
-
-        <a class="button"
-           href="https://wa.me/233599035746?text=Hello%20Bright%20Vision%20Digital%20Design">
-          Chat with Us on WhatsApp
-        </a>
+          <div class="contact-item">
+            <strong>Location</strong>
+            Dungu Last Stop, Tamale, Northern Region, Ghana
+          </div>
+        </div>
       </div>
     </section>
-
   </main>
 
   <footer>
-    <div class="container">
-      <p>
-        &copy; <span id="year"></span>
-        Bright Vision Digital Design. All rights reserved.
-      </p>
-      <p>Designed with care in Ghana.</p>
+    <div class="wrap footer-row">
+      <span>
+        © <span id="year">2026</span> Bright Vision Digital Design.
+        All rights reserved.
+      </span>
+      <span>Your vision, our creativity.</span>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+  <a class="float-wa"
+     href="https://wa.me/233599035746?text=Hello%20Bright%20Vision%20Digital%20Design"
+     aria-label="Contact Bright Vision on WhatsApp">
+    WhatsApp ↗
+  </a>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
   </html>
